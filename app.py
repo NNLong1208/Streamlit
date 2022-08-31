@@ -1,7 +1,7 @@
 import streamlit as st
 from transformers import pipeline
 
-@st.cache(allow_output_mutation=True)
+@st.cache()
 def get_model():
     summarizer = pipeline("summarization", model="LongNN/TextSummarization")
     return summarizer
